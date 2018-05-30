@@ -387,6 +387,8 @@ MonoBehaviour:
   scoreValue: 10
   TurretExplosion: {fileID: 1328157359695236, guid: 4f9e0877f6b68e04b8983893082bd9ef,
     type: 2}
+  AnimatedExplosion: {fileID: 1973856769714886, guid: bcb4bfaf75794094687e1a91aed9b6a2,
+    type: 2}
   turretBody: {fileID: 1509460443770338, guid: 6bdca0abcd4c1e247a225daae07c3dd3, type: 2}
   turretBrains: {fileID: 1784288120064288, guid: d7f854e1882b6c942b8b2572197d5173,
     type: 2}

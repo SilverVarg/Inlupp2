@@ -17,6 +17,8 @@ public class CanvasController : MonoBehaviour {
     public Text RestartText;
     public GameObject RestartButton;
     public Vector3 v;
+    public Animator fader;
+    public Image black;
     private bool gameOver;
     private bool restart;
 
@@ -77,6 +79,7 @@ public class CanvasController : MonoBehaviour {
 
         if (score > 500)
         {
+            StartCoroutine (Fading());
             SceneManager.LoadScene("Boss");
         }
 
@@ -104,6 +107,11 @@ public class CanvasController : MonoBehaviour {
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    IEnumerator Fading()
+    {
+        fader.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
     }
 
 

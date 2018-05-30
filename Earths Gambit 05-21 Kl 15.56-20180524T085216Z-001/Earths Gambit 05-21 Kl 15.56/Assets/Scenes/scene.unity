@@ -2270,6 +2270,16 @@ Prefab:
       propertyPath: v2.y
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 114863904330326642, guid: 8e7f3ad56df93604bab30156507b464e,
+        type: 2}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114863904330326642, guid: 8e7f3ad56df93604bab30156507b464e,
+        type: 2}
+      propertyPath: fader
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e7f3ad56df93604bab30156507b464e, type: 2}
   m_IsPrefabParent: 0
@@ -4797,7 +4807,7 @@ Prefab:
     - target: {fileID: 224792116774593526, guid: 726019e5e671a6644babe294f5f65458,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.6
+      value: -0.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 224792116774593526, guid: 726019e5e671a6644babe294f5f65458,
         type: 2}

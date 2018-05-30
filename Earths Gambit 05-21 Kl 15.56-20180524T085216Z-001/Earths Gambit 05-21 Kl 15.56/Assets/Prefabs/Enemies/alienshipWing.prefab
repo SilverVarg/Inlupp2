@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212891766636439802}
   - component: {fileID: 50510656057239562}
   - component: {fileID: 114073847002946116}
+  - component: {fileID: 114527078100022732}
   m_Layer: 0
   m_Name: alienshipWing
   m_TagString: Untagged
@@ -77,6 +78,17 @@ MonoBehaviour:
   dirX: 0
   dirY: 0
   torque: 0
+--- !u!114 &114527078100022732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390228316543930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7045fdef635ab974095b933ffca38870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212891766636439802
 SpriteRenderer:
   m_ObjectHideFlags: 1

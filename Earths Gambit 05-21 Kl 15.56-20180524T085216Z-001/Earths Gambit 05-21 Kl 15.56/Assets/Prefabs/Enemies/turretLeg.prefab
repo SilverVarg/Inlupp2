@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212732839818537782}
   - component: {fileID: 50640938330535184}
   - component: {fileID: 114132124513175558}
+  - component: {fileID: 114672749939104764}
   m_Layer: 0
   m_Name: turretLeg
   m_TagString: Untagged
@@ -77,6 +78,17 @@ MonoBehaviour:
   dirX: 0
   dirY: 0
   torque: 0
+--- !u!114 &114672749939104764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146532337874108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7045fdef635ab974095b933ffca38870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212732839818537782
 SpriteRenderer:
   m_ObjectHideFlags: 1

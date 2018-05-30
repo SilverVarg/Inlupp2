@@ -35,6 +35,7 @@ public class HPTestTurret : MonoBehaviour
             canvasController.addScore(scoreValue);
             Debug.Log("bullet hit");
             Instantiate(TurretExplosion, transform.position, Quaternion.identity);
+         //   Instantiate(AnimatedExplosion, transform.position, Quaternion.identity);
             Instantiate(turretBody, transform.position, Quaternion.identity);
             Instantiate(turretBrains, transform.position, Quaternion.identity);
             Instantiate(turretGun, transform.position, Quaternion.identity);
@@ -82,6 +83,7 @@ public class HPTestTurret : MonoBehaviour
         canvasController.addScore(ExtraScore);
         Debug.Log("bullet hit");
         Instantiate(TurretExplosion, transform.position, Quaternion.identity);
+     //   Instantiate(AnimatedExplosion, transform.position, Quaternion.identity);
         Instantiate(turretBody, transform.position, Quaternion.identity);
         Instantiate(turretBrains, transform.position, Quaternion.identity);
         Instantiate(turretGun, transform.position, Quaternion.identity);
