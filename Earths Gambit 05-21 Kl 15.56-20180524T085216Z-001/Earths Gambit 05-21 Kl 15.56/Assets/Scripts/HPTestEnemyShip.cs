@@ -9,8 +9,7 @@ public class HPTestEnemyShip : MonoBehaviour
     public int scoreValue;
     private CanvasController canvasController;
     public GameObject explosionAlienship, alienshipGun, alienshipNose, alienshipWing;
-    private bool Key = false;
-    public float dmg = 10;
+
     // Use this for initialization
     void Start()
     {
@@ -31,11 +30,7 @@ public class HPTestEnemyShip : MonoBehaviour
     {
         if (hp <= 0)
         {
-            if (Key == false)
-            {
-                canvasController.addScore(scoreValue);
-            }
-            Key = true;
+        
             BouncyEnemy enemyScript = GetComponent<BouncyEnemy>();
             enemyScript.Fall += -0.005f;
             enemyScript.rotationSpeed = 40;
@@ -51,6 +46,7 @@ public class HPTestEnemyShip : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             hp -= 1;
+            StartCoroutine("HurtColor");
 
 
         }
@@ -70,11 +66,6 @@ public class HPTestEnemyShip : MonoBehaviour
             Explode();
 
         }
-        if (other.gameObject.tag == "Player")
-        {
-            other.GetComponent<NewBehaviourScript>().Harm(dmg);
-
-        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -90,24 +81,15 @@ public class HPTestEnemyShip : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             hp -= 1;
+            StartCoroutine("HurtColor");
 
 
-        }if (other.gameObject.tag == "turret")
+        }
+        if (other.gameObject.tag == "turret")
         {
             Explode();
         }
-        if  (other.gameObject.tag == "Player") {
-            GameObject Player = GameObject.FindWithTag("Player");
-            if (Player != null)
-            {
-                Player.GetComponent<NewBehaviourScript>().Harm(dmg);
-            }
-            Explode();
-            
-             //   other.GetComponent<NewBehaviourScript>().Harm(dmg);
-
-       }
-            else
+        else
         {
           //  Explode();
         }
@@ -115,12 +97,23 @@ public class HPTestEnemyShip : MonoBehaviour
     public void Explode()
     {
 
-      
+        canvasController.addScore(scoreValue);
         Instantiate(explosionAlienship, transform.position, Quaternion.identity);
         Instantiate(alienshipGun, transform.position, Quaternion.identity);
         Instantiate(alienshipNose, transform.position, Quaternion.identity);
         Instantiate(alienshipWing, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    IEnumerator HurtColor()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //Red, Green, Blue, Alpha/Transparency
+            yield return new WaitForSeconds(.1f);
+            GetComponent<SpriteRenderer>().color = Color.white; //White is the default "color" for the sprite, if you're curious.
+            yield return new WaitForSeconds(.1f);
+        }
     }
 
 

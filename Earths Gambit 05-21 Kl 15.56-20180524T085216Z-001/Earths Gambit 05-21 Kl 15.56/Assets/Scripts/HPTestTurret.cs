@@ -10,7 +10,7 @@ public class HPTestTurret : MonoBehaviour
     private CanvasController canvasController;
     public GameObject TurretExplosion, turretBody, turretBrains, turretGun, turretLeg, turretNub;
     public float dmg;
-    public int ExtraScore = 2;
+    public int ExtraScore = 30;
 
     // Use this for initialization
     void Start()
@@ -35,6 +35,7 @@ public class HPTestTurret : MonoBehaviour
             canvasController.addScore(scoreValue);
             Debug.Log("bullet hit");
             Instantiate(TurretExplosion, transform.position, Quaternion.identity);
+         //   Instantiate(AnimatedExplosion, transform.position, Quaternion.identity);
             Instantiate(turretBody, transform.position, Quaternion.identity);
             Instantiate(turretBrains, transform.position, Quaternion.identity);
             Instantiate(turretGun, transform.position, Quaternion.identity);
@@ -48,6 +49,7 @@ public class HPTestTurret : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             hp -= 1;
+            StartCoroutine("HurtColor");
 
 
         }
@@ -55,8 +57,10 @@ public class HPTestTurret : MonoBehaviour
         else if (other.gameObject.tag == "Bomb")
         {
             hp -= 5;
+            StartCoroutine("HurtColor");
 
-        }else if (other.CompareTag("Player"))
+        }
+        else if (other.CompareTag("Player"))
         {
             other.GetComponent<NewBehaviourScript>().Harm(dmg);
 
@@ -79,6 +83,7 @@ public class HPTestTurret : MonoBehaviour
         canvasController.addScore(ExtraScore);
         Debug.Log("bullet hit");
         Instantiate(TurretExplosion, transform.position, Quaternion.identity);
+     //   Instantiate(AnimatedExplosion, transform.position, Quaternion.identity);
         Instantiate(turretBody, transform.position, Quaternion.identity);
         Instantiate(turretBrains, transform.position, Quaternion.identity);
         Instantiate(turretGun, transform.position, Quaternion.identity);
@@ -87,6 +92,16 @@ public class HPTestTurret : MonoBehaviour
         Destroy(gameObject);
     }
 
+    IEnumerator HurtColor()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //Red, Green, Blue, Alpha/Transparency
+            yield return new WaitForSeconds(.1f);
+            GetComponent<SpriteRenderer>().color = Color.white; //White is the default "color" for the sprite, if you're curious.
+            yield return new WaitForSeconds(.1f);
+        }
+    }
 
 
 }

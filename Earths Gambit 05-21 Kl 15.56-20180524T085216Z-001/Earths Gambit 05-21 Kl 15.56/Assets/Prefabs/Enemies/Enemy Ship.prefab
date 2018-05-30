@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpreal: 2
-  scoreValue: 1
+  scoreValue: 5
   explosionAlienship: {fileID: 1700374419623864, guid: ed3d7ce0627e2f94e936aeaa2e221662,
     type: 2}
   alienshipGun: {fileID: 1467717046776282, guid: f40d99ff5dda925439181141e41fe739,

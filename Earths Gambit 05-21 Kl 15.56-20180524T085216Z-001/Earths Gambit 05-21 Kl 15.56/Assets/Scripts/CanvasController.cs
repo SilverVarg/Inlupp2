@@ -17,9 +17,11 @@ public class CanvasController : MonoBehaviour {
     public Text RestartText;
     public GameObject RestartButton;
     public Vector3 v;
+    public Animator fader;
+    public Image black;
     private bool gameOver;
     private bool restart;
-    public Transform restartposition;
+
     private float lifeMid = 40f;
     private float lifeCritical = 10f;
     private Quaternion cameraStable;
@@ -48,10 +50,7 @@ public class CanvasController : MonoBehaviour {
         }
         if (restart)
         {
-
-            Debug.Log("restart");
-            RestartButton.transform.position = restartposition.position ;
-            
+            RestartButton.transform.position = v;
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Application.LoadLevel(Application.loadedLevel);
@@ -80,6 +79,7 @@ public class CanvasController : MonoBehaviour {
 
         if (score > 500)
         {
+            StartCoroutine (Fading());
             SceneManager.LoadScene("Boss");
         }
 
@@ -91,13 +91,9 @@ public class CanvasController : MonoBehaviour {
         score += ScoreValue;
         UpdateScore();
     }
-    public int getScore()
-    {
-        return score;
-    }
     void UpdateScore()
     {
-        scoretext.text = "Enemies Killed: " + score;
+        scoretext.text = "Score: " + score;
     }
     public void GameOver()
     {
@@ -111,6 +107,11 @@ public class CanvasController : MonoBehaviour {
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    IEnumerator Fading()
+    {
+        fader.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
     }
 
 

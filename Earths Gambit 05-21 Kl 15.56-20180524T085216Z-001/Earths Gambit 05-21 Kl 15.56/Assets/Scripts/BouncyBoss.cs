@@ -48,7 +48,7 @@ public class BouncyBoss : MonoBehaviour {
     {
         for (int i = 0; i < 3; i++)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.3f); //Red, Green, Blue, Alpha/Transparency
+            GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //Red, Green, Blue, Alpha/Transparency
             yield return new WaitForSeconds(.1f);
             GetComponent<SpriteRenderer>().color = Color.white; //White is the default "color" for the sprite, if you're curious.
             yield return new WaitForSeconds(.1f);

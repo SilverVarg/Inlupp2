@@ -22,7 +22,6 @@ TagManager:
   - Bouncer
   - Laser
   - GroundSpawn
-  - Wallet
   layers:
   - Default
   - TransparentFX
