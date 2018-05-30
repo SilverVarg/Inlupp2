@@ -19,6 +19,7 @@ public class CanvasController : MonoBehaviour {
     public Vector3 v;
     public Animator fader;
     public Image black;
+    public Transform restartposition;
     private bool gameOver;
     private bool restart;
 
@@ -50,7 +51,8 @@ public class CanvasController : MonoBehaviour {
         }
         if (restart)
         {
-            RestartButton.transform.position = v;
+            Debug.Log("restart");
+            RestartButton.transform.position = restartposition.position;
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Application.LoadLevel(Application.loadedLevel);

@@ -22,6 +22,7 @@ TagManager:
   - Bouncer
   - Laser
   - GroundSpawn
+  - Wallet
   layers:
   - Default
   - TransparentFX
@@ -41,7 +42,7 @@ TagManager:
   - booster
   - Turret
   - SpawnGround
-  - 
+  - enemypasswall
   - 
   - 
   - 
