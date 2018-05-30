@@ -99,7 +99,6 @@ public class CanvasController : MonoBehaviour {
         {
             scoretext.text = "Score: " + score;
         }
-        scoretext.text = "Score: " + score;
     }
     public void GameOver()
     {

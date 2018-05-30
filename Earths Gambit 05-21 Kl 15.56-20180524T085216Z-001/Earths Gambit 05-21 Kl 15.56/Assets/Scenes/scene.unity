@@ -651,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 325866643}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpawnPositionWallet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,12 +663,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325866642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.666765, y: 0.12325135, z: -0.35663444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.91, y: 4.3528295, z: -0.35899764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1550168374}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350730012
 GameObject:
@@ -2399,8 +2399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33, y: -54}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchoredPosition: {x: -33, y: -25.71}
+  m_SizeDelta: {x: 500, y: 43.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026476978
 MonoBehaviour:
@@ -3049,7 +3049,7 @@ Prefab:
     - target: {fileID: 114480197621451412, guid: d2d34f63874041849af326c8c75d71ca,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1807678007123866, guid: d2d34f63874041849af326c8c75d71ca, type: 2}
       propertyPath: m_IsActive
@@ -3647,7 +3647,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 325866643}
   m_Father: {fileID: 1401213784}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3664,14 +3665,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hazards: {fileID: 1787119008028436, guid: 8b1678658028cd149bcde360b4acea49, type: 2}
   SpawnValues: {x: 0, y: 0, z: 0}
-  hazardCount: 0
-  SpawnLocation1: {fileID: 0}
-  spawnWaitMin: 0
-  spawnWaitMax: 0
-  startWait: 0
-  waveWait: 0
-  MinSpawnYvalue: 0
-  MaxSpawnYvalue: 0
+  hazardCount: 100
+  SpawnLocation1: {fileID: 325866643}
+  spawnWaitMin: 40
+  spawnWaitMax: 50
+  startWait: 40
+  waveWait: 10
+  MinSpawnYvalue: 0.01
+  MaxSpawnYvalue: 9
 --- !u!1 &1560724640
 GameObject:
   m_ObjectHideFlags: 0

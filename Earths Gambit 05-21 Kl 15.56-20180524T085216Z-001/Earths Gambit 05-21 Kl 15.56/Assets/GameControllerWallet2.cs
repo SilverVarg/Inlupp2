@@ -30,8 +30,8 @@ public class GameControllerWallet2 : MonoBehaviour {
             for (int i = 0; i < hazardCount; i++)
             {
                 MoveWallet enemyScript = Hazards.GetComponent<MoveWallet>();
-                enemyScript.rotationSpeed = Random.RandomRange(50f, 100f);
-                enemyScript.velocityX = Random.RandomRange(-1.5f, -3f);
+                enemyScript.rotationSpeed = Random.Range(50f, 100f);
+                enemyScript.velocityX = Random.Range(-1.5f, -3f);
 
                 float spawnWait = Random.Range(spawnWaitMin, spawnWaitMax);
 

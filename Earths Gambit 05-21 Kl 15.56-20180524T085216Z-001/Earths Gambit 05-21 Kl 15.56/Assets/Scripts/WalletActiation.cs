@@ -5,7 +5,7 @@ using UnityEngine;
 public class WalletActiation : MonoBehaviour {
     public GameObject Canvas;
     public float Goal;
-    GamecontrollerWallet script;
+    GameControllerWallet2 script;
     // Use this for initialization
     void Start () {
 		
@@ -17,7 +17,7 @@ public class WalletActiation : MonoBehaviour {
       //  if(enemyScript.getScore() > Goal)
         {
             Debug.Log("REACHED IT");
-            script = GetComponentInChildren<GamecontrollerWallet>();
+            script = GetComponentInChildren<GameControllerWallet2>();
             script.enabled = true;
         }
     }
