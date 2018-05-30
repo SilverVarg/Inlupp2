@@ -95,6 +95,10 @@ public class CanvasController : MonoBehaviour {
     }
     void UpdateScore()
     {
+        if (score != null)
+        {
+            scoretext.text = "Score: " + score;
+        }
         scoretext.text = "Score: " + score;
     }
     public void GameOver()

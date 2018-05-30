@@ -14,7 +14,7 @@ public class WalletActiation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         CanvasController enemyScript = Canvas.GetComponent<CanvasController>();
-       // if(enemyScript.getScore() > Goal)
+      //  if(enemyScript.getScore() > Goal)
         {
             Debug.Log("REACHED IT");
             script = GetComponentInChildren<GamecontrollerWallet>();

@@ -9,6 +9,8 @@ public class HPTestEnemyShip : MonoBehaviour
     public int scoreValue;
     private CanvasController canvasController;
     public GameObject explosionAlienship, alienshipGun, alienshipNose, alienshipWing;
+    private bool Key = false;
+    public float dmg = 10;
 
     // Use this for initialization
     void Start()
@@ -30,7 +32,11 @@ public class HPTestEnemyShip : MonoBehaviour
     {
         if (hp <= 0)
         {
-        
+            if (Key == false)
+            {
+                canvasController.addScore(scoreValue);
+            }
+            Key = true;
             BouncyEnemy enemyScript = GetComponent<BouncyEnemy>();
             enemyScript.Fall += -0.005f;
             enemyScript.rotationSpeed = 40;
@@ -66,6 +72,11 @@ public class HPTestEnemyShip : MonoBehaviour
             Explode();
 
         }
+        if (other.gameObject.tag == "Player")
+        {
+            other.GetComponent<NewBehaviourScript>().Harm(dmg);
+
+        }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -89,9 +100,18 @@ public class HPTestEnemyShip : MonoBehaviour
         {
             Explode();
         }
+        if (other.gameObject.tag == "Player")
+        {
+            GameObject Player = GameObject.FindWithTag("Player");
+            if (Player != null)
+            {
+                Player.GetComponent<NewBehaviourScript>().Harm(dmg);
+            }
+            Explode();
+        }
         else
         {
-          //  Explode();
+            //  Explode();
         }
     }
     public void Explode()
