@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4938921005030770}
   - component: {fileID: 212140003365395370}
   - component: {fileID: 50597493826226696}
-  - component: {fileID: 114386769603173042}
   - component: {fileID: 114611667582222272}
   m_Layer: 0
   m_Name: partAsteroid2
@@ -63,17 +62,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114386769603173042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1110953254220320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7045fdef635ab974095b933ffca38870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114611667582222272
 MonoBehaviour:
   m_ObjectHideFlags: 1

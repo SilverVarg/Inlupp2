@@ -26,8 +26,10 @@ public class onpointerDownBomb : MonoBehaviour, IPointerUpHandler, IPointerDownH
         if (flag)
         {
             GameObject Player = GameObject.Find("Player");
+            Debug.Log("BOMBS AWAY");
             if (Time.time > nextFire && Player != null)
             {
+                Debug.Log("BOMBS AWAY2");
                 nextFire = Time.time + fireRate;
                 Player.GetComponent<FiringBomb>().startFire();
             }

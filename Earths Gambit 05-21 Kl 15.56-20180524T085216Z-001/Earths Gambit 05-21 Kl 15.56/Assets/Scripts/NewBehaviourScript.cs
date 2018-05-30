@@ -144,13 +144,21 @@ public class NewBehaviourScript : MonoBehaviour
             other.gameObject.SetActive(false);
             playerAudioSource.pitch = Random.Range(0.5f, 1.5f);
             playerAudioSource.PlayOneShot(PowerupSound, 0.5f);
-            health += 50;
-        }else if (other.gameObject.tag == "bullet" && !invincible)
+            health += 10;
+        }
+        else if (other.gameObject.tag == "bullet" && !invincible)
         {
             StartCoroutine("HurtColor");
             health -= bulletDmg;
             invincible = true;
             Invoke("resetInvulnerability", 0.5f);
+        }
+        else if (other.gameObject.CompareTag("Wallet"))
+        {
+            other.gameObject.SetActive(false);
+            playerAudioSource.pitch = Random.Range(0.5f, 1.5f);
+            playerAudioSource.PlayOneShot(PowerupSound, 0.5f);
+            SceneManager.LoadScene("Boss");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

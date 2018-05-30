@@ -384,10 +384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpreal: 10
-  scoreValue: 10
+  scoreValue: 1
   TurretExplosion: {fileID: 1328157359695236, guid: 4f9e0877f6b68e04b8983893082bd9ef,
-    type: 2}
-  AnimatedExplosion: {fileID: 1973856769714886, guid: bcb4bfaf75794094687e1a91aed9b6a2,
     type: 2}
   turretBody: {fileID: 1509460443770338, guid: 6bdca0abcd4c1e247a225daae07c3dd3, type: 2}
   turretBrains: {fileID: 1784288120064288, guid: d7f854e1882b6c942b8b2572197d5173,
@@ -396,7 +394,7 @@ MonoBehaviour:
   turretLeg: {fileID: 1146532337874108, guid: 635284f0c1f26624bb4ba7abf76e192b, type: 2}
   turretNub: {fileID: 1068097131247046, guid: 3d4db7c1548f20d45b4b8747855d859e, type: 2}
   dmg: 5
-  ExtraScore: 30
+  ExtraScore: 2
 --- !u!114 &114637679134793500
 MonoBehaviour:
   m_ObjectHideFlags: 1

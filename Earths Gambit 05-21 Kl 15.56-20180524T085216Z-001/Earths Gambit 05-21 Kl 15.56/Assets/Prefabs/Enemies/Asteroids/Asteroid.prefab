@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpreal: 1
-  scoreValue: 1
+  scoreValue: 0
   explosionAsteroid: {fileID: 1356322350673974, guid: ed95d962391510841ab9c81f909ef9e5,
     type: 2}
   partAsteroid4: {fileID: 1933626771468308, guid: fb588959a452e1c4faa8d27bece8be55,

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212166420971580126}
   - component: {fileID: 50436755464461046}
   - component: {fileID: 114365022431269606}
-  - component: {fileID: 114990722341615100}
   m_Layer: 0
   m_Name: partAsteroid3
   m_TagString: Untagged
@@ -78,17 +77,6 @@ MonoBehaviour:
   dirX: 0
   dirY: 0
   torque: 0
---- !u!114 &114990722341615100
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1616241140527886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7045fdef635ab974095b933ffca38870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212166420971580126
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -43,7 +43,7 @@ public class HpTestTentacle : MonoBehaviour {
         if (other.gameObject.tag == "bullet")
         {
             hp -= 1;
-            StartCoroutine(HurtColor());
+
 
         }
         else if (other.gameObject.tag == "Backwall")
@@ -51,36 +51,22 @@ public class HpTestTentacle : MonoBehaviour {
             hp -= 100;
             if (hp <= 0)
                 Destroy(gameObject);
-            StartCoroutine(HurtColor());
 
         }
         else if (other.gameObject.tag == "Bomb")
         {
             hp -= 10;
-            StartCoroutine(HurtColor());
-        }
-        else if (other.gameObject.tag == "Laser")
+        }else if (other.gameObject.tag == "Laser")
         {
                 Destroy(gameObject);
-        }
+            }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == ("Laser"))
         {
-            Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator HurtColor()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f); //Red, Green, Blue, Alpha/Transparency
-            yield return new WaitForSeconds(.1f);
-            GetComponent<SpriteRenderer>().color = Color.white; //White is the default "color" for the sprite, if you're curious.
-            yield return new WaitForSeconds(.1f);
+            Destroy(gameObject); 
         }
     }
 

@@ -18,7 +18,7 @@ public class VJHandler : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointe
 
     public void OnDrag(PointerEventData ped)
     {
-        Vector2 position = Vector2.zero;
+        Vector2 position = joystick.transform.position;
 
         //To get InputDirection
         RectTransformUtility.ScreenPointToLocalPointInRectangle
@@ -50,8 +50,9 @@ public class VJHandler : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointe
 
     public void OnPointerUp(PointerEventData ped)
     {
-
-        InputDirection = Vector3.zero;
-        joystick.rectTransform.anchoredPosition = Vector3.zero;
+        // delete line under too get constant speed
+       InputDirection = Vector3.zero;
+    //    joystick.rectTransform.anchoredPosition = new Vector3(InputDirection.x * (jsContainer.rectTransform.sizeDelta.x / 3)
+     //                                                          , InputDirection.y * (jsContainer.rectTransform.sizeDelta.y) / 3);
     }
 }
