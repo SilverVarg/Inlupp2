@@ -292,6 +292,7 @@ MonoBehaviour:
   hpreal: 20
   scoreValue: 0
   dmg: 3
+  Powerup: {fileID: 1253418346480856, guid: 75ceee1ea5a060442910b9a99a8e49b2, type: 2}
 --- !u!212 &212424381173423006
 SpriteRenderer:
   m_ObjectHideFlags: 1

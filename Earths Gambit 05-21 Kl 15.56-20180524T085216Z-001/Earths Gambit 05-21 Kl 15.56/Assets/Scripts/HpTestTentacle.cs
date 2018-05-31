@@ -10,7 +10,9 @@ public class HpTestTentacle : MonoBehaviour {
     public int scoreValue;
     private CanvasController canvasController;
     public float dmg;
-
+    private float spawnWaitMin = 1;
+    private float spawnWaitMax = 5;
+    public GameObject Powerup;
 
     // Use this for initialization
     void Start()
@@ -32,6 +34,12 @@ public class HpTestTentacle : MonoBehaviour {
     {
         if (hp <= 0)
         {
+            float spawnWait = Random.Range(spawnWaitMin, spawnWaitMax);
+            if (spawnWait == 4)
+            {
+                Instantiate(Powerup, transform.position, Quaternion.identity);
+            }
+           
             canvasController.addScore(scoreValue);
             Debug.Log("bullet hit");
             Destroy(gameObject);

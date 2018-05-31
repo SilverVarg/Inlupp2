@@ -9,7 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
     private GameObject player;
     private AudioSource playerAudioSource;
     private bool invincible = false;
-
+    public GameObject DummyWallet, Boss;
+    private bool Wallet = false;
     public float velocityX = 2.0f;
     public float velocityY = 5.0f;
 
@@ -51,7 +52,12 @@ public class NewBehaviourScript : MonoBehaviour
     {
 
         
-
+        if(Wallet == false && Boss == null)
+        {
+            Debug.Log("Spawn Wallet");
+            Instantiate(DummyWallet, transform.position, Quaternion.identity);
+            Wallet = true;
+        }
         if (Input.GetKey("w"))
         {
             transform.position += (Vector3.up * velocityY * Time.deltaTime);
@@ -144,20 +150,13 @@ public class NewBehaviourScript : MonoBehaviour
             other.gameObject.SetActive(false);
             playerAudioSource.pitch = Random.Range(0.5f, 1.5f);
             playerAudioSource.PlayOneShot(PowerupSound, 0.5f);
-            health += 50;
+            health += 25;
         }else if (other.gameObject.tag == "bullet" && !invincible)
         {
             StartCoroutine("HurtColor");
             health -= bulletDmg;
             invincible = true;
             Invoke("resetInvulnerability", 0.5f);
-        }
-        else if (other.gameObject.CompareTag("Wallet"))
-        {
-            other.gameObject.SetActive(false);
-            playerAudioSource.pitch = Random.Range(0.5f, 1.5f);
-            playerAudioSource.PlayOneShot(PowerupSound, 0.5f);
-            SceneManager.LoadScene("Boss");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

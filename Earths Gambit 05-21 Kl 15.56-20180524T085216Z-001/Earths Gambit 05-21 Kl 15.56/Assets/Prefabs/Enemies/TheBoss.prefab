@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 4893198820282320}
   - component: {fileID: 212858801533165334}
   - component: {fileID: 114422622343433662}
+  - component: {fileID: 82607854522465630}
   m_Layer: 16
   m_Name: TheBoss
   m_TagString: Boss
@@ -374,6 +375,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.519458, y: 3.8352575}
   m_EdgeRadius: 0
+--- !u!82 &82607854522465630
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320032116232580}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 790ac7ee6a31488499f9eafe3c3de39c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114024464667064086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -385,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b4639da0bd2a345911f1804574aefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpreal: 150
+  hpreal: 1
   scoreValue: 3
   dmg: 6
   Tentaclelocation: {fileID: 4960014408047368, guid: 32cace7b7c9963b468f47899dc7dfe2d,
@@ -404,9 +485,49 @@ MonoBehaviour:
     type: 2}
   TentacleAttackRoofPhase4: {fileID: 1847833620043526, guid: 56dbb3f32d38acb4e933dbb2d821c10c,
     type: 2}
-  StartPhase2WhenHp: 115
-  StartPhase3WhenHp: 85
-  StartPhase4WhenHp: 40
+  Boss: {fileID: 0}
+  Boss_Explosion: {fileID: 1878714189714144, guid: 5658bb2dfc387394581e769a4984b8f4,
+    type: 2}
+  Boss_eye: {fileID: 1545652955940070, guid: 746ce96bab4b63f4396dce2ae677150b, type: 2}
+  Boss_sporethingy01: {fileID: 1352622682326614, guid: 01d3f3b3757a40b4c966ef5db54f55d2,
+    type: 2}
+  Boss_Tentical01: {fileID: 1069052459113110, guid: 9ab86670b7a9c0c468ecfce7133db1a3,
+    type: 2}
+  Boss_Tentical02: {fileID: 1322135626866908, guid: ad79378036536624183ac0453df25004,
+    type: 2}
+  Boss_Tentical03: {fileID: 1034367867518246, guid: adfa8f587105572479a388a72c95ddd8,
+    type: 2}
+  Boss_Tentical04: {fileID: 1349028008508208, guid: 2075a7c9163153d45a6eebafacad357e,
+    type: 2}
+  Boss_tooth01: {fileID: 1695498003610434, guid: 7936a7dfb32c4e245a4266b09cd34467,
+    type: 2}
+  Boss_tooth02: {fileID: 1440234464885066, guid: b295c2b5879bf3d4cbe41c3833f5824d,
+    type: 2}
+  Boss_tooth03: {fileID: 1762465916566704, guid: 5cf0c789e20a3b44d9041e8a0eaf514f,
+    type: 2}
+  Boss_tooth04: {fileID: 1973170901336254, guid: 9347ef99c887faf40b55786d3a29bf10,
+    type: 2}
+  Boss_tooth05: {fileID: 1305983391413528, guid: 141f4f4beeb972b4caad2a2d04d2e9bc,
+    type: 2}
+  Boss_tooth06: {fileID: 1199219664402562, guid: 134052979f1d07e44b00754f30c2b581,
+    type: 2}
+  Boss_tooth07: {fileID: 1077192871611544, guid: 4d0df2fef9b44b64f9455ecb0561692b,
+    type: 2}
+  Boss_tooth08: {fileID: 1550535080372578, guid: 64a816c2ce4d5a54aa18be2292dd6aa5,
+    type: 2}
+  Boss_tooth09: {fileID: 1557553136793280, guid: db7eea0ba5c141648a1687fbf31998cc,
+    type: 2}
+  Boss_tooth10: {fileID: 1178230324390632, guid: 7dfaa87b54d11e340b20055c307cb0f6,
+    type: 2}
+  Boss_tooth11: {fileID: 1190159101553450, guid: 46d28ea77b810944888d01ae01d5313c,
+    type: 2}
+  Boss_tooth12: {fileID: 1012606808845432, guid: 4ad16eb1dc018264bbfd26e323f0502a,
+    type: 2}
+  Boss_upperjaw: {fileID: 1449499290106730, guid: 3b7a115ae19630846b9824ace0f074c9,
+    type: 2}
+  StartPhase2WhenHp: 1
+  StartPhase3WhenHp: 1
+  StartPhase4WhenHp: 1
   newSprite: {fileID: 21300000, guid: 21e1a10ffb4804047b92b9eeab8faf98, type: 3}
   originalSprite: {fileID: 21300000, guid: 3d2728e7c5ace38419599c87a807ec85, type: 3}
 --- !u!114 &114112565313483438
@@ -420,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adb6ac850039a2489d460a5c662dfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretbullet: {fileID: 1842364007993412, guid: 36049703d0b36d542afc259515206d4d,
+  turretbullet: {fileID: 1054034654511620, guid: dfeedeb9fd8ef26499aeef78e11d6e32,
     type: 2}
   fireRate: 1.5
   range: 100
@@ -469,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adb6ac850039a2489d460a5c662dfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretbullet: {fileID: 1842364007993412, guid: 36049703d0b36d542afc259515206d4d,
+  turretbullet: {fileID: 1054034654511620, guid: dfeedeb9fd8ef26499aeef78e11d6e32,
     type: 2}
   fireRate: 1.5
   range: 100
@@ -484,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adb6ac850039a2489d460a5c662dfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretbullet: {fileID: 1842364007993412, guid: 36049703d0b36d542afc259515206d4d,
+  turretbullet: {fileID: 1054034654511620, guid: dfeedeb9fd8ef26499aeef78e11d6e32,
     type: 2}
   fireRate: 1.5
   range: 100

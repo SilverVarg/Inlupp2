@@ -20,7 +20,6 @@ public class GameControllerWallet2 : MonoBehaviour {
     Transform[] Array;
 
 	void Start () {
-
         StartCoroutine(SpawnWaves());
 	}
     IEnumerator SpawnWaves()

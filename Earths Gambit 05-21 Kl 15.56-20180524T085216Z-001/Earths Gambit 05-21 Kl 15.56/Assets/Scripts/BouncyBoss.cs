@@ -9,11 +9,12 @@ public class BouncyBoss : MonoBehaviour {
     private Vector3 startPos;
     private Vector3 v;
     public float dmg;
-
+    private bool Roar = false;
+    
     void Start()
     {
         v = transform.position;
-
+        
     }
 
     void Update()
@@ -26,7 +27,12 @@ public class BouncyBoss : MonoBehaviour {
         v.y -= delta * Mathf.Sin(Time.time * speed);
         transform.position += Vector3.left * Time.deltaTime * 1.2f;
 
-
+        if(delta > 0 && Roar == false)
+        {
+            AudioSource d = GetComponent<AudioSource>();
+            d.Play();
+            Roar = true;
+        }
 
 
     }

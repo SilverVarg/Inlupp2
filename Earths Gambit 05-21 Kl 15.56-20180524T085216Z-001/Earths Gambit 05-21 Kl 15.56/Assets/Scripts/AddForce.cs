@@ -9,11 +9,12 @@ public class AddForce : MonoBehaviour
     public float dirX;
     public float dirY;
     public float torque;
+   
 
     // Use this for initialization
     void Start()
     {
-
+        
         dirX = Random.Range(-5, 5);
         dirY = Random.Range(5, 8);
         torque = Random.Range(5, 15);
@@ -26,6 +27,6 @@ public class AddForce : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

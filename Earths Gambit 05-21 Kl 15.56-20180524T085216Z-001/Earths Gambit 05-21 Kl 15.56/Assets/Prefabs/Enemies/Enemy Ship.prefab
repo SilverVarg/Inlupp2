@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpreal: 2
-  scoreValue: 5
+  scoreValue: 3
   explosionAlienship: {fileID: 1700374419623864, guid: ed3d7ce0627e2f94e936aeaa2e221662,
     type: 2}
   alienshipGun: {fileID: 1467717046776282, guid: f40d99ff5dda925439181141e41fe739,
@@ -379,6 +379,7 @@ MonoBehaviour:
     type: 2}
   alienshipWing: {fileID: 1390228316543930, guid: 6a20b640e2083d045a191bcf44106827,
     type: 2}
+  dmg: 10
 --- !u!114 &114595765208710654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,9 +391,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2a9c210dbc8de4e98060579e7af138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delta: 2.1594822
-  speed: 3.5268326
-  moveSpeed: -0.083618134
+  delta: 1.3294427
+  speed: 4.15954
+  moveSpeed: -0.07414615
   dmg: 10
   Fall: 0
   rotationSpeed: 0

@@ -95,7 +95,7 @@ public class CanvasController : MonoBehaviour {
     }
     void UpdateScore()
     {
-        if (scoretext != null)
+        if (score != null)
         {
             scoretext.text = "Score: " + score;
         }
@@ -117,6 +117,10 @@ public class CanvasController : MonoBehaviour {
     {
         fader.SetBool("Fade", true);
         yield return new WaitUntil(() => black.color.a == 1);
+    }
+    public int getScore()
+    {
+        return score;
     }
 
 
