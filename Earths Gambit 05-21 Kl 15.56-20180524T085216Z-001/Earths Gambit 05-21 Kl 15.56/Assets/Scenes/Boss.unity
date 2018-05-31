@@ -1218,7 +1218,7 @@ MonoBehaviour:
   bullet: {fileID: 1299507570018540, guid: 029e348deb7580846b2ad295d2b3c609, type: 2}
   fireRate: 0.1
   nextFire: 9.167989
-  health: 10
+  health: 100
   fullHealth: 100
   lives: 3
   PowerupSound: {fileID: 8300000, guid: 3431a7d172f137a468f3558057bf7b74, type: 3}
@@ -2597,7 +2597,7 @@ Prefab:
     - target: {fileID: 114024464667064086, guid: 5d7ee0b676c06c243b7a62eb117d34ba,
         type: 2}
       propertyPath: hpreal
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114024464667064086, guid: 5d7ee0b676c06c243b7a62eb117d34ba,
         type: 2}
