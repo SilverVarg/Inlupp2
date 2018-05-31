@@ -75,7 +75,6 @@ public class Hptestboss : MonoBehaviour {
             Destroy(GameObject.Find("GameController Tentacle Ground Phase 4(Clone)"));
             Destroy(GameObject.Find("Tentacle Gamecontroller Roof Phase 4(Clone)"));
             Debug.Log("Boss Destroyed Set true");
-           
 
         }
     
