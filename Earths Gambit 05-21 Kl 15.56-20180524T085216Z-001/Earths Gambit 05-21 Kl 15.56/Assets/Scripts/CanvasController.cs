@@ -79,6 +79,11 @@ public class CanvasController : MonoBehaviour {
             Fill.color = Color.blue;
         }
 
+        if (score > 500)
+        {
+            SceneManager.LoadScene("Boss");
+        }
+
         // playerHealth--;
     }
     public void addScore(int ScoreValue)
@@ -107,7 +112,6 @@ public class CanvasController : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenu");
     }
-
     public int getScore()
     {
         return score;

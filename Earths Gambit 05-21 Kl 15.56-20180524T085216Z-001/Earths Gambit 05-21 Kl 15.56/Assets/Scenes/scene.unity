@@ -3205,7 +3205,7 @@ Prefab:
     - target: {fileID: 114480197621451412, guid: d2d34f63874041849af326c8c75d71ca,
         type: 2}
       propertyPath: health
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1807678007123866, guid: d2d34f63874041849af326c8c75d71ca, type: 2}
       propertyPath: m_IsActive
@@ -3855,10 +3855,10 @@ MonoBehaviour:
   SpawnValues: {x: 0, y: 0, z: 0}
   hazardCount: 100
   SpawnLocation1: {fileID: 325866643}
-  spawnWaitMin: 20
-  spawnWaitMax: 22.43
-  startWait: 20
-  waveWait: 5
+  spawnWaitMin: 40
+  spawnWaitMax: 50
+  startWait: 40
+  waveWait: 10
   MinSpawnYvalue: 0.01
   MaxSpawnYvalue: 9
 --- !u!1 &1560724640
@@ -4405,7 +4405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626896204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07, y: -0.08, z: 0}
+  m_LocalPosition: {x: -5.47, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 398097133}

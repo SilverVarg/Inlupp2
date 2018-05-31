@@ -9,7 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     private GameObject player;
     private AudioSource playerAudioSource;
     private bool invincible = false;
-    public GameObject DummyWallet, Boss;
+    public GameObject Boss;
     private bool Wallet = false;
     public float velocityX = 2.0f;
     public float velocityY = 5.0f;
@@ -61,7 +61,6 @@ public class NewBehaviourScript : MonoBehaviour
            if(go == false)
             {
                 Debug.Log("Spawn Wallet");
-                Instantiate(DummyWallet, transform.position, Quaternion.identity);
                 Wallet = true;
             }
         }
