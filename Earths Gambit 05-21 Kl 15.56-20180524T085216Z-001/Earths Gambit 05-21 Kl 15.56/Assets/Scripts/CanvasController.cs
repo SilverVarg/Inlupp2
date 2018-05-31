@@ -95,7 +95,7 @@ public class CanvasController : MonoBehaviour {
     }
     void UpdateScore()
     {
-        if (score != null)
+        if (scoretext != null)
         {
             scoretext.text = "Score: " + score;
         }
