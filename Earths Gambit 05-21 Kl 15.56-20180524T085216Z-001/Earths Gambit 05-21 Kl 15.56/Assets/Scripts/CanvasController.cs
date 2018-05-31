@@ -79,12 +79,6 @@ public class CanvasController : MonoBehaviour {
             Fill.color = Color.blue;
         }
 
-        if (score > 500)
-        {
-            StartCoroutine (Fading());
-            SceneManager.LoadScene("Boss");
-        }
-
         // playerHealth--;
     }
     public void addScore(int ScoreValue)
@@ -113,11 +107,7 @@ public class CanvasController : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenu");
     }
-    IEnumerator Fading()
-    {
-        fader.SetBool("Fade", true);
-        yield return new WaitUntil(() => black.color.a == 1);
-    }
+
     public int getScore()
     {
         return score;

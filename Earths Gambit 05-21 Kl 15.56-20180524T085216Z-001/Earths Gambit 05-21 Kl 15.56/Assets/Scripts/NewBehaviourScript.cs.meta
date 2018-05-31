@@ -5,7 +5,13 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - DummyWallet: {fileID: 1221316568153066, guid: fbe4c7ac11a04024baaf82a574611a4c,
+      type: 2}
+  - Boss: {instanceID: 0}
+  - bullet: {instanceID: 0}
+  - PowerupSound: {instanceID: 0}
+  - RespawnPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

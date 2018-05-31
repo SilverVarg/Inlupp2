@@ -3205,7 +3205,7 @@ Prefab:
     - target: {fileID: 114480197621451412, guid: d2d34f63874041849af326c8c75d71ca,
         type: 2}
       propertyPath: health
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1807678007123866, guid: d2d34f63874041849af326c8c75d71ca, type: 2}
       propertyPath: m_IsActive
@@ -3855,10 +3855,10 @@ MonoBehaviour:
   SpawnValues: {x: 0, y: 0, z: 0}
   hazardCount: 100
   SpawnLocation1: {fileID: 325866643}
-  spawnWaitMin: 40
-  spawnWaitMax: 50
-  startWait: 40
-  waveWait: 10
+  spawnWaitMin: 20
+  spawnWaitMax: 22.43
+  startWait: 20
+  waveWait: 5
   MinSpawnYvalue: 0.01
   MaxSpawnYvalue: 9
 --- !u!1 &1560724640
