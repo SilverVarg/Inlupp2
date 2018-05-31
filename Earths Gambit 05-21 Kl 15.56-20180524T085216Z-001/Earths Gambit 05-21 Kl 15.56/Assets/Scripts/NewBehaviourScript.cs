@@ -30,11 +30,15 @@ public class NewBehaviourScript : MonoBehaviour
     public AudioClip PowerupSound;
     public Transform RespawnPoint;
     public float enemiesKilled = 0;
-
+    private bool go = false;
     private CanvasController canvasController;
 
     void Start()
     {
+        if (Boss = null)
+        {
+            go = true;
+        }
         playerAudioSource = GetComponent<AudioSource>();
         fullHealth = health;
         GameObject gameControllerObject = GameObject.FindWithTag("CanvasController");
@@ -54,9 +58,12 @@ public class NewBehaviourScript : MonoBehaviour
         
         if(Wallet == false && Boss == null)
         {
-            Debug.Log("Spawn Wallet");
-            Instantiate(DummyWallet, transform.position, Quaternion.identity);
-            Wallet = true;
+           if(go == false)
+            {
+                Debug.Log("Spawn Wallet");
+                Instantiate(DummyWallet, transform.position, Quaternion.identity);
+                Wallet = true;
+            }
         }
         if (Input.GetKey("w"))
         {
