@@ -181,7 +181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Miko Abu-Altemen\nFredrik Hammar\nJussi Hyv\xF6nen\nDaniel Kjeller\nKacper
+  m_Text: "Miko Abu-Altemen\nFredrik Hammar\nJussi Hyv\xF6nen\nDaniel Kjellner\nKacper
     Robertsson"
 --- !u!222 &357714992
 CanvasRenderer:
